@@ -5,7 +5,8 @@
   <title>Ilker Polat</title>
   <link rel="icon" type="image/x-icon" href="icon.ico">
 </head>
-<body class="page"></body>
+
+<body class="page">
 <div class="header">
     <h1 style: #aa9998 >Ilker Polat</h1>
     <p style: #aa9998 >My supercool header</p>
@@ -14,13 +15,15 @@
 </div>
 
 
-
 <div class="content">
+  <div class="header-spacer"></div> 
   <p>merhaba ben ilkermpolat</p>
   <h1>This is a Heading</h1>
 <p>This is a paragraph.</p>
 </div>
 
+
+<div class="footer-spacer"></div>
 
 
 <div class="footer">
@@ -66,9 +69,20 @@ a:link, a:visited {
 #content {
     min-height: 100%;
     margin-bottom: -100px; /* Equivalent to footer's height */
-    padding-top   : 50px;  /* Equivalent to header's height */
-    padding-bottom: 100px; /* Equivalent to footer's height */
-    box-sizing: border-box;
+}
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0; right: 0; /* Make it fill the whole horizontal space */
+}
+
+.header-spacer, #header { height: 50px; }
+.footer-spacer, #footer { height: 100px; }
+
+#footer {
+    position: relative;
+    z-index: 1;
 }
 a:hover, a:active {
   background-color: SlateBlue;
